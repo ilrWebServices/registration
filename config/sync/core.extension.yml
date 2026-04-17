@@ -69,6 +69,7 @@ module:
   salesforce_mapping_ui: 0
   salesforce_pull: 0
   samlauth: 0
+  select_or_other: 0
   serialization: 0
   state_machine: 0
   symfony_mailer: 0

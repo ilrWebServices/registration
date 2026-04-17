@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b479f6efd8206742b07b515d0a1bef89",
+    "content-hash": "0da6e1f8e4db0715c7135433b07688ff",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3418,6 +3418,78 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/samlauth",
                 "issues": "http://drupal.org/project/samlauth"
+            }
+        },
+        {
+            "name": "drupal/select_or_other",
+            "version": "4.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/select_or_other.git",
+                "reference": "4.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/select_or_other-4.2.2.zip",
+                "reference": "4.2.2",
+                "shasum": "0f021e17530aa96c72d63d0b774741ab0f1f62df"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.2.2",
+                    "datestamp": "1763272032",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "daften",
+                    "homepage": "https://www.drupal.org/user/176274"
+                },
+                {
+                    "name": "danielb",
+                    "homepage": "https://www.drupal.org/user/134005"
+                },
+                {
+                    "name": "haydeniv",
+                    "homepage": "https://www.drupal.org/user/149501"
+                },
+                {
+                    "name": "hmendes",
+                    "homepage": "https://www.drupal.org/user/3673677"
+                },
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "qzmenko",
+                    "homepage": "https://www.drupal.org/user/3220037"
+                },
+                {
+                    "name": "vladbo",
+                    "homepage": "https://www.drupal.org/user/2696261"
+                }
+            ],
+            "description": "Provides a select box form element with additional option 'Other' to give a textfield.",
+            "homepage": "https://www.drupal.org/project/select_or_other",
+            "support": {
+                "source": "https://git.drupalcode.org/project/select_or_other"
             }
         },
         {

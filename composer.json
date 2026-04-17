@@ -67,6 +67,7 @@
     "drupal/queue_ui": "^3.0",
     "drupal/salesforce": "^5",
     "drupal/samlauth": "^3.0",
+    "drupal/select_or_other": "^4.2",
     "drupal/symfony_mailer": "^1.4",
     "drupal/token": "^1.5",
     "drupal/typed_data": "^2",
