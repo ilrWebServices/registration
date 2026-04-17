@@ -1,0 +1,10 @@
+uuid: ba7e3de2-89f7-4edc-8b62-bf45d8f85b5f
+langcode: en
+status: true
+dependencies: {  }
+id: lai_conference
+label: 'LAI Conference'
+traits: {  }
+locked: false
+orderItemType: lai_conference
+generateTitle: false

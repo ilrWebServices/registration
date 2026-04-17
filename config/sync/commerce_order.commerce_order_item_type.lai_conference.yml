@@ -1,0 +1,10 @@
+uuid: c5209b54-a118-465b-8ede-73d4d244a173
+langcode: en
+status: true
+dependencies: {  }
+id: lai_conference
+label: 'LAI Conference'
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: lai_conference_registration

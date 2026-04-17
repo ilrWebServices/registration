@@ -1,0 +1,28 @@
+uuid: 69280e5a-7e8d-496e-bfd3-f6a1761fd5b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+third_party_settings:
+  commerce_cart:
+    cart_block_view: commerce_cart_block
+    cart_form_view: registration_cart_form
+    cart_expiration:
+      number: 30
+      unit: day
+    enable_cart_message: true
+  commerce_checkout:
+    checkout_flow: registration_conference
+id: lai_conference_registration
+label: 'LAI conference registration'
+traits: {  }
+locked: false
+workflow: order_default
+numberPattern: null
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+receiptSubject: ''

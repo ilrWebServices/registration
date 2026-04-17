@@ -1,0 +1,110 @@
+uuid: 20248595-c123-4b56-8e09-d1f25522603b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_checkout_order_fields
+    - commerce_payment
+    - commerce_promotion
+    - email_registration
+    - ilr_outreach_discounts
+    - ilr_registrations
+label: 'Conference Registration'
+id: registration_conference
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  display_checkout_progress_breadcrumb_links: false
+  guest_order_assign: false
+  guest_new_account: false
+  guest_new_account_notify: false
+  panes:
+    email_registration_login:
+      display_label: null
+      step: login
+      weight: 0
+      wrapper_element: container
+      allow_guest_checkout: true
+      allow_registration: true
+      registration_form_mode: register
+    contact_information:
+      display_label: null
+      step: order_information
+      weight: 1
+      wrapper_element: fieldset
+      double_entry: false
+    payment_information:
+      display_label: null
+      step: order_information
+      weight: 2
+      wrapper_element: fieldset
+      require_payment_method: false
+    payment_process:
+      display_label: null
+      step: payment
+      weight: 3
+      wrapper_element: container
+      capture: true
+    completion_register:
+      display_label: null
+      step: _disabled
+      weight: 4
+      wrapper_element: null
+    completion_message:
+      step: complete
+      weight: 4
+      wrapper_element: null
+      message:
+        value: "<p>Thank you for registering!</p>\r\n\r\n<script type=\"text/javascript\">\r\n  var _ss = _ss || [];\r\n  _ss.push(['_setDomain', 'https://koi-3QS88UKVPW.marketingautomation.services/net']);\r\n  _ss.push(['_setAccount', 'KOI-4M22841VOI']);\r\n  _ss.push(['_trackPageView']);\r\n  (function() {\r\n    var ss = document.createElement('script');\r\n    ss.type = 'text/javascript'; ss.async = true;\r\n    ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QS88UKVPW.marketingautomation.services/client/ss.js?ver=2.4.0';\r\n    var scr = document.getElementsByTagName('script')[0];\r\n    scr.parentNode.insertBefore(ss, scr);\r\n  })();\r\n</script>\r\n"
+        format: full_html
+    'order_fields:checkout':
+      display_label: 'Order fields'
+      step: order_information
+      weight: 4
+      wrapper_element: container
+    coupon_redemption:
+      display_label: null
+      step: _disabled
+      weight: 5
+      wrapper_element: container
+      allow_multiple: false
+    email_registration_completion_registration:
+      display_label: null
+      step: complete
+      weight: 5
+      wrapper_element: container
+    ilr_outreach_discount_redemption:
+      display_label: null
+      step: order_information
+      weight: 5
+      wrapper_element: container
+      allow_multiple: false
+    order_summary:
+      display_label: null
+      step: _sidebar
+      weight: 6
+      wrapper_element: container
+      view: registration_checkout_order_summary
+    order_details:
+      display_label: null
+      step: complete
+      weight: 6
+      wrapper_element: null
+    review:
+      display_label: null
+      step: _disabled
+      weight: 7
+      wrapper_element: null
+    customer_comments:
+      display_label: null
+      step: _disabled
+      weight: 10
+      wrapper_element: fieldset
+    login:
+      display_label: null
+      step: _disabled
+      weight: 11
+      wrapper_element: null
+      allow_guest_checkout: true
+      allow_registration: false
+      registration_form_mode: register
