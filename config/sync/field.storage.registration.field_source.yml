@@ -1,0 +1,36 @@
+uuid: bb5096b9-db61-43f9-9992-fbba2f23a148
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+    - options
+id: registration.field_source
+field_name: field_source
+entity_type: registration
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: email
+      label: Email
+    -
+      value: print_brochure_postal_mail
+      label: 'Print brochure / postal mail'
+    -
+      value: website
+      label: Website
+    -
+      value: colleague_word_of_mouth
+      label: 'Colleague / word of mouth'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,151 @@
+uuid: 9a748d26-b83c-4e8b-84cf-de558baf6c55
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.field.participant.lai_conference_attendee.field_accessible_accommodation
+    - field.field.participant.lai_conference_attendee.field_address
+    - field.field.participant.lai_conference_attendee.field_attendee_type
+    - field.field.participant.lai_conference_attendee.field_dietary_restrictions
+    - field.field.participant.lai_conference_attendee.field_industry
+    - field.field.participant.lai_conference_attendee.field_job_title
+    - field.field.participant.lai_conference_attendee.field_needs_cle_credits
+    - field.field.participant.lai_conference_attendee.field_phone
+  module:
+    - address_display
+    - options
+    - user
+id: participant.lai_conference_attendee.default
+targetEntityType: participant
+bundle: lai_conference_attendee
+mode: default
+content:
+  field_accessible_accommodation:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_address:
+    type: address_display_formatter
+    label: inline
+    settings:
+      address_display:
+        address_line1:
+          glue: ''
+          weight: -10
+          display: false
+        address_line2:
+          glue: ','
+          weight: -9
+          display: false
+        address_line3:
+          glue: ','
+          weight: -8
+          display: false
+        locality:
+          glue: ','
+          weight: -7
+          display: false
+        postal_code:
+          glue: ''
+          weight: -6
+          display: false
+        country_code:
+          glue: ''
+          weight: -5
+          display: false
+        langcode:
+          glue: ','
+          weight: -4
+          display: false
+        administrative_area:
+          glue: ','
+          weight: -3
+          display: false
+        dependent_locality:
+          glue: ','
+          weight: -2
+          display: false
+        sorting_code:
+          glue: ','
+          weight: -1
+          display: false
+        given_name:
+          glue: ''
+          weight: 0
+          display: true
+        family_name:
+          glue: ','
+          weight: 1
+          display: true
+        organization:
+          glue: ''
+          weight: 2
+          display: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_attendee_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_dietary_restrictions:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_industry:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_job_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_needs_cle_credits:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_phone:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  mail:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: -10
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

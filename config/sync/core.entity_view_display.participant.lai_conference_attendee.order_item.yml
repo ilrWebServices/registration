@@ -1,0 +1,101 @@
+uuid: c19956da-22d0-4967-8be3-c04ffd0c4fa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.participant.order_item
+    - erf.participant_type.lai_conference_attendee
+    - field.field.participant.lai_conference_attendee.field_accessible_accommodation
+    - field.field.participant.lai_conference_attendee.field_address
+    - field.field.participant.lai_conference_attendee.field_attendee_type
+    - field.field.participant.lai_conference_attendee.field_dietary_restrictions
+    - field.field.participant.lai_conference_attendee.field_industry
+    - field.field.participant.lai_conference_attendee.field_job_title
+    - field.field.participant.lai_conference_attendee.field_needs_cle_credits
+    - field.field.participant.lai_conference_attendee.field_phone
+  module:
+    - address_display
+    - user
+id: participant.lai_conference_attendee.order_item
+targetEntityType: participant
+bundle: lai_conference_attendee
+mode: order_item
+content:
+  field_address:
+    type: address_display_formatter
+    label: hidden
+    settings:
+      address_display:
+        organization:
+          glue: ''
+          weight: -1
+          display: false
+        address_line1:
+          glue: ''
+          weight: 0
+          display: false
+        address_line2:
+          glue: ','
+          weight: 1
+          display: false
+        locality:
+          glue: ','
+          weight: 2
+          display: false
+        postal_code:
+          glue: ''
+          weight: 3
+          display: false
+        country_code:
+          glue: ''
+          weight: 4
+          display: false
+        langcode:
+          glue: ','
+          weight: 100
+          display: false
+        administrative_area:
+          glue: ','
+          weight: 100
+          display: false
+        dependent_locality:
+          glue: ','
+          weight: 100
+          display: false
+        sorting_code:
+          glue: ','
+          weight: 100
+          display: false
+        given_name:
+          glue: ''
+          weight: 100
+          display: true
+        family_name:
+          glue: ','
+          weight: 100
+          display: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  mail:
+    type: email_mailto
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: -10
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_accessible_accommodation: true
+  field_attendee_type: true
+  field_dietary_restrictions: true
+  field_industry: true
+  field_job_title: true
+  field_needs_cle_credits: true
+  field_phone: true

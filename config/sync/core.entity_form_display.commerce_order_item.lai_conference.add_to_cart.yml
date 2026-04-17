@@ -1,0 +1,37 @@
+uuid: 3d91cd80-cfc6-4f81-b33c-fe128b954f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.lai_conference
+    - core.entity_form_mode.commerce_order_item.add_to_cart
+  module:
+    - commerce_order
+id: commerce_order_item.lai_conference.add_to_cart
+targetEntityType: commerce_order_item
+bundle: lai_conference
+mode: add_to_cart
+content:
+  purchased_entity:
+    type: entity_reference_autocomplete
+    weight: -1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  quantity:
+    type: commerce_quantity
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      step: '1'
+    third_party_settings: {  }
+hidden:
+  adjustments: true
+  created: true
+  total_price: true
+  unit_price: true

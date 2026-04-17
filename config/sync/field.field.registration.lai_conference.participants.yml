@@ -1,0 +1,29 @@
+uuid: 59e190e3-0b24-4d6c-8b85-bf817f544b65
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - erf.registration_type.lai_conference
+    - field.storage.registration.participants
+id: registration.lai_conference.participants
+field_name: participants
+entity_type: registration
+bundle: lai_conference
+label: Participants
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:participant'
+  handler_settings:
+    target_bundles:
+      lai_conference_attendee: lai_conference_attendee
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

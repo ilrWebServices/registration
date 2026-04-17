@@ -1,0 +1,19 @@
+uuid: acdfadc4-2ebb-4b27-9dff-65a4e337625e
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_job_title
+id: participant.lai_conference_attendee.field_job_title
+field_name: field_job_title
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Job Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

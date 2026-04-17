@@ -1,0 +1,105 @@
+uuid: 87340b68-4f1a-40a3-89d5-e7b298eda186
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.field.participant.lai_conference_attendee.field_accessible_accommodation
+    - field.field.participant.lai_conference_attendee.field_address
+    - field.field.participant.lai_conference_attendee.field_attendee_type
+    - field.field.participant.lai_conference_attendee.field_dietary_restrictions
+    - field.field.participant.lai_conference_attendee.field_industry
+    - field.field.participant.lai_conference_attendee.field_job_title
+    - field.field.participant.lai_conference_attendee.field_needs_cle_credits
+    - field.field.participant.lai_conference_attendee.field_phone
+  module:
+    - address
+    - select_or_other
+    - telephone
+id: participant.lai_conference_attendee.default
+targetEntityType: participant
+bundle: lai_conference_attendee
+mode: default
+content:
+  field_accessible_accommodation:
+    type: string_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 5
+    region: content
+    settings:
+      wrapper_type: details
+    third_party_settings: {  }
+  field_attendee_type:
+    type: select_or_other_list
+    weight: 13
+    region: content
+    settings:
+      select_element_type: select_or_other_select
+      sort_options: ''
+      other_placeholder: ''
+      other_option: ''
+      other_field_label: ''
+      add_other_value_to_allowed_values: true
+    third_party_settings: {  }
+  field_dietary_restrictions:
+    type: string_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_industry:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_job_title:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_needs_cle_credits:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  mail:
+    type: email_default
+    weight: -10
+    region: content
+    settings:
+      placeholder: ''
+      size: 100
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: -9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

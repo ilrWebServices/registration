@@ -948,8 +948,8 @@ $config['samlauth.authentication']['sp_entity_id'] = $scheme . '://' . $_SERVER[
  * Ignored config name regex patterns.
  */
 $settings['config_ignore_patterns'] = [
-  '/^erf\.registration_type\.[a-z_]+$/',
-  '/^erf\.participant_type\.[a-z_]+$/',
+  // '/^erf\.registration_type\.[a-z_]+$/',
+  // '/^erf\.participant_type\.[a-z_]+$/',
 ];
 
 /**

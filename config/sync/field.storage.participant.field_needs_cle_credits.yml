@@ -1,0 +1,18 @@
+uuid: fcb505f3-2e80-4070-a221-0018af7ac7ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+id: participant.field_needs_cle_credits
+field_name: field_needs_cle_credits
+entity_type: participant
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

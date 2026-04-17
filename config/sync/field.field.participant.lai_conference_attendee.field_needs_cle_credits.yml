@@ -1,0 +1,21 @@
+uuid: 6f0dc406-bdd4-49af-86bc-85b898c2e17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_needs_cle_credits
+id: participant.lai_conference_attendee.field_needs_cle_credits
+field_name: field_needs_cle_credits
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Will this attendee need CLE credits?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

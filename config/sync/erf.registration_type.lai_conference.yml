@@ -1,0 +1,12 @@
+uuid: 56c01dfd-aefd-44ce-ae0b-7cc393def745
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf_commerce
+third_party_settings:
+  erf_commerce:
+    cart_redirect: true
+    participants_as_quantity: true
+id: lai_conference
+label: 'LAI Conference'

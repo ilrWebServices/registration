@@ -1,0 +1,67 @@
+uuid: 95c7a970-bca6-4e5b-a61b-047863e49dca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.participant.inline
+    - erf.registration_type.lai_conference
+    - field.field.registration.lai_conference.field_source
+    - field.field.registration.lai_conference.participants
+    - field.field.registration.lai_conference.product_variation
+  module:
+    - erf_commerce
+    - inline_entity_form
+id: registration.lai_conference.default
+targetEntityType: registration
+bundle: lai_conference
+mode: default
+content:
+  field_source:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  locked:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  participants:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: inline
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  product_variation:
+    type: rendered_variations
+    weight: 0
+    region: content
+    settings:
+      variation_view_mode: cart
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,34 @@
+uuid: 6a5d7110-ade0-4a7c-adc3-4a166879a277
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.registration_type.lai_conference
+    - field.field.registration.lai_conference.field_source
+    - field.field.registration.lai_conference.participants
+    - field.field.registration.lai_conference.product_variation
+  module:
+    - options
+    - user
+id: registration.lai_conference.default
+targetEntityType: registration
+bundle: lai_conference
+mode: default
+content:
+  field_source:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  user_id:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  participants: true
+  product_variation: true

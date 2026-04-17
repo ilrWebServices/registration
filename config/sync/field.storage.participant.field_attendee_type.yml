@@ -1,0 +1,30 @@
+uuid: d6f193a7-aa94-4c17-b2fe-5c750e82048a
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+    - options
+id: participant.field_attendee_type
+field_name: field_attendee_type
+entity_type: participant
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: union_representative
+      label: 'Union representative'
+    -
+      value: management_representative
+      label: 'Management representative'
+    -
+      value: attorney
+      label: Attorney
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

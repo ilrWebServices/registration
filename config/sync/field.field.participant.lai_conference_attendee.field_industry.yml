@@ -1,0 +1,21 @@
+uuid: 076e4745-0440-428c-bf09-21dd240d5ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_industry
+  module:
+    - options
+id: participant.lai_conference_attendee.field_industry
+field_name: field_industry
+entity_type: participant
+bundle: lai_conference_attendee
+label: Industry
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

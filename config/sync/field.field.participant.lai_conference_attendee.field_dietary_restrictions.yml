@@ -1,0 +1,19 @@
+uuid: 61391056-2c38-410c-99a9-62f4d52a9f41
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_dietary_restrictions
+id: participant.lai_conference_attendee.field_dietary_restrictions
+field_name: field_dietary_restrictions
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Please let us know if you have any dietary restrictions.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

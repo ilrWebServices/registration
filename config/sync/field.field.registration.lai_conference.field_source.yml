@@ -1,0 +1,21 @@
+uuid: 94bbe6ec-bdba-4b47-824e-cf2bf52cf1e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.registration_type.lai_conference
+    - field.storage.registration.field_source
+  module:
+    - options
+id: registration.lai_conference.field_source
+field_name: field_source
+entity_type: registration
+bundle: lai_conference
+label: 'How did you hear about this conference?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
