@@ -113,7 +113,7 @@
     ],
     "sync-prod": [
       "drush sql:drop -y",
-      "platform db:dump --stdout --project=f65bssre3cvb6 --environment=master --app=register --relationship=database --gzip | gunzip | drush sql:cli",
+      "upsun db:dump --stdout --project=simgb5ul7fpto --environment=master --app=register --relationship=mariadb --gzip | gunzip | drush sql:cli",
       "./post_sync_fix_triggers.php",
       "drush sfrvk ilr_marketing_jwt_oauth"
     ],
