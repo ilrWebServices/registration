@@ -833,3 +833,40 @@ function ilr_registrations_field_class_year_options(FieldStorageDefinitionInterf
   $years = range((int) date('Y') + 3, 1945);
   return array_combine($years, $years);
 }
+
+/**
+ * Callback function for participant.field_states allowed values.
+ */
+function ilr_registrations_allowed_values_states(): array {
+  $subdivision_repository = \Drupal::service('address.subdivision_repository');
+
+  // Return the list of states for the US.
+  return $subdivision_repository->getList(['US']);
+}
+
+/**
+ * Implements hook_inline_entity_form_entity_form_alter().
+ */
+function ilr_registrations_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+  if ($entity_form['#entity_type'] === 'participant' && $entity_form['#bundle'] === 'lai_conference_attendee') {
+    $parents = $entity_form['#parents'];
+    $parents_input_name = array_shift($parents);
+    $parents_input_name .= '[' . implode('][', $parents) . ']';
+
+    $entity_form['field_attendee_type_other']['#states'] = [
+      'visible' => [
+        ':input[name="' . $parents_input_name . '[field_attendee_type]"]' => ['value' => 'other'],
+      ],
+      'required' => [
+        ':input[name="' . $parents_input_name . '[field_attendee_type]"]' => ['value' => 'other'],
+      ]
+    ];
+
+    $entity_form['field_states']['#states'] = [
+      'visible' => [
+        [':input[name="' . $parents_input_name . '[field_need_hrci_credits][value]"]' => ['checked' => TRUE]],
+        [':input[name="' . $parents_input_name . '[field_need_shrm_credits][value]"]' => ['checked' => TRUE]],
+      ],
+    ];
+  }
+}

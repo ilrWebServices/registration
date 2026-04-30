@@ -1,0 +1,7 @@
+uuid: 81fffec8-37b7-490d-acb9-87090f4ffa09
+langcode: en
+status: true
+dependencies: {  }
+id: lai_conference_attendee
+label: 'LAI Conference Attendee'
+reference_user: false

@@ -1,0 +1,107 @@
+uuid: 96194033-6589-480b-8019-0800642afa8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.participant.inline
+    - erf.participant_type.lai_conference_attendee
+    - field.field.participant.lai_conference_attendee.field_accessible_accommodation
+    - field.field.participant.lai_conference_attendee.field_address
+    - field.field.participant.lai_conference_attendee.field_attendee_type
+    - field.field.participant.lai_conference_attendee.field_attendee_type_other
+    - field.field.participant.lai_conference_attendee.field_dietary_restrictions
+    - field.field.participant.lai_conference_attendee.field_industry
+    - field.field.participant.lai_conference_attendee.field_job_title
+    - field.field.participant.lai_conference_attendee.field_need_hrci_credits
+    - field.field.participant.lai_conference_attendee.field_need_shrm_credits
+    - field.field.participant.lai_conference_attendee.field_phone
+    - field.field.participant.lai_conference_attendee.field_states
+  module:
+    - address
+    - telephone
+id: participant.lai_conference_attendee.inline
+targetEntityType: participant
+bundle: lai_conference_attendee
+mode: inline
+content:
+  field_accessible_accommodation:
+    type: string_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 0
+    region: content
+    settings:
+      wrapper_type: details
+    third_party_settings: {  }
+  field_attendee_type:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_attendee_type_other:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_industry:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_job_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_need_hrci_credits:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_need_shrm_credits:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_phone:
+    type: telephone_default
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_states:
+    type: options_select
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mail:
+    type: email_default
+    weight: 2
+    region: content
+    settings:
+      placeholder: 'email address'
+      size: 100
+    third_party_settings: {  }
+hidden:
+  field_dietary_restrictions: true
+  uid: true

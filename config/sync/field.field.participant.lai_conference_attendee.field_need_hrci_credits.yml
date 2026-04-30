@@ -1,0 +1,21 @@
+uuid: 48cffbbc-4827-4bfa-9d92-20240ac1e6c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_need_hrci_credits
+id: participant.lai_conference_attendee.field_need_hrci_credits
+field_name: field_need_hrci_credits
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Need HRCI Credits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

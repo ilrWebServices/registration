@@ -1,0 +1,21 @@
+uuid: 2f799dfa-f744-4f8d-af9f-02e700934aba
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+id: participant.field_attendee_type_other
+field_name: field_attendee_type_other
+entity_type: participant
+type: string
+settings:
+  max_length: 128
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

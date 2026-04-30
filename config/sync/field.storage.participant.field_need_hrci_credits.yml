@@ -1,0 +1,18 @@
+uuid: 6ca89a33-6103-42a0-b12a-9fae65f4c36c
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+id: participant.field_need_hrci_credits
+field_name: field_need_hrci_credits
+entity_type: participant
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
