@@ -218,13 +218,14 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
       ]);
 
       if (!empty($registrations)) {
+        /** @var \Drupal\erf\Entity\RegistrationInterface $registration */
         $registration = reset($registrations);
 
-        foreach ($registration->participants->referencedEntities() as $participant) {
+        foreach ($registration->participants->referencedEntities() as $delta => $participant) {
           // @todo handle participants even if there is not an address field
           $address_value = $participant->field_address->getValue();
           $address = reset($address_value);
-          $participants[] = [
+          $participants[$delta] = [
             'participant_id' => $participant->id(),
             // Temporarily stop sending the salesforce id per request from DE.
             "contact_sfid" => NULL,
@@ -246,10 +247,33 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
             "accessible_accommodation" => $participant->hasField('field_accessible_accommodation') ? substr($participant->field_accessible_accommodation->value ?? '', 0, 250) : NULL,
             "is_cornell_employee" => $participant->hasField('field_is_cornell_employee') ? ($participant->field_is_cornell_employee->value ? 'true' : 'false') : NULL,
             "apply_to_certificate" => "",
+            // LAI-only fields.
+            "attendee_role_description" => NULL,
+            "shrm_credit_requested" => NULL,
+            "hrci_credit_requested" => NULL,
+            "cle_credit_requested_for_state" => NULL,
+            "how_did_you_hear_about_us" =>  NULL,
             // @todo Add additional participant fields as necessary.
             // 'additional_fields' => $utm_fields,
             'additional_fields' => [],
           ];
+
+          if ($registration->bundle() === 'lai_conference') {
+            $attendee_type = $participant->hasField('field_attendee_type') ? $participant->field_attendee_type->value : NULL;
+
+            if ($attendee_type === 'other') {
+              $attendee_type = $participant->hasField('field_attendee_type_other') ? $participant->field_attendee_type_other->value : NULL;
+            }
+
+            $participants[$delta]['attendee_role_description'] = $attendee_type;
+            $participants[$delta]['how_did_you_hear_about_us'] = $registration->hasField('field_source') ? $registration->field_source->value : NULL;
+
+            // The code in SF requires these boolean fields to be strings.
+            $participants[$delta]['shrm_credit_requested'] = $participant->hasField('field_need_shrm_credits') && $participant->field_need_shrm_credits->value ? 'true' : 'false';
+            $participants[$delta]['hrci_credit_requested'] = $participant->hasField('field_need_hrci_credits') && $participant->field_need_hrci_credits->value ? 'true' : 'false';
+
+            $participants[$delta]['cle_credit_requested_for_state'] = $participant->hasField('field_states') ? $participant->field_states->value : NULL;
+          }
         }
       }
 
