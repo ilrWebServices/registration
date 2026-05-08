@@ -861,12 +861,5 @@ function ilr_registrations_inline_entity_form_entity_form_alter(&$entity_form, &
         ':input[name="' . $parents_input_name . '[field_attendee_type]"]' => ['value' => 'other'],
       ]
     ];
-
-    $entity_form['field_states']['#states'] = [
-      'visible' => [
-        [':input[name="' . $parents_input_name . '[field_need_hrci_credits][value]"]' => ['checked' => TRUE]],
-        [':input[name="' . $parents_input_name . '[field_need_shrm_credits][value]"]' => ['checked' => TRUE]],
-      ],
-    ];
   }
 }

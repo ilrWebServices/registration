@@ -249,9 +249,6 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
             "apply_to_certificate" => "",
             // LAI-only fields.
             "attendee_role_description" => NULL,
-            "shrm_credit_requested" => NULL,
-            "hrci_credit_requested" => NULL,
-            "cle_credit_requested_for_state" => NULL,
             "how_did_you_hear_about_us" =>  NULL,
             // @todo Add additional participant fields as necessary.
             // 'additional_fields' => $utm_fields,
@@ -267,12 +264,6 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
 
             $participants[$delta]['attendee_role_description'] = $attendee_type;
             $participants[$delta]['how_did_you_hear_about_us'] = $registration->hasField('field_source') ? $registration->field_source->value : NULL;
-
-            // The code in SF requires these boolean fields to be strings.
-            $participants[$delta]['shrm_credit_requested'] = $participant->hasField('field_need_shrm_credits') && $participant->field_need_shrm_credits->value ? 'true' : 'false';
-            $participants[$delta]['hrci_credit_requested'] = $participant->hasField('field_need_hrci_credits') && $participant->field_need_hrci_credits->value ? 'true' : 'false';
-
-            $participants[$delta]['cle_credit_requested_for_state'] = $participant->hasField('field_states') ? $participant->field_states->value : NULL;
           }
         }
       }

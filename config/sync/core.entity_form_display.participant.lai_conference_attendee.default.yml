@@ -11,10 +11,7 @@ dependencies:
     - field.field.participant.lai_conference_attendee.field_dietary_restrictions
     - field.field.participant.lai_conference_attendee.field_industry
     - field.field.participant.lai_conference_attendee.field_job_title
-    - field.field.participant.lai_conference_attendee.field_need_hrci_credits
-    - field.field.participant.lai_conference_attendee.field_need_shrm_credits
     - field.field.participant.lai_conference_attendee.field_phone
-    - field.field.participant.lai_conference_attendee.field_states
   module:
     - address
     - telephone
@@ -74,32 +71,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_need_hrci_credits:
-    type: boolean_checkbox
-    weight: 18
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  field_need_shrm_credits:
-    type: boolean_checkbox
-    weight: 19
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_phone:
     type: telephone_default
     weight: 6
     region: content
     settings:
       placeholder: ''
-    third_party_settings: {  }
-  field_states:
-    type: options_select
-    weight: 15
-    region: content
-    settings: {  }
     third_party_settings: {  }
   mail:
     type: email_default

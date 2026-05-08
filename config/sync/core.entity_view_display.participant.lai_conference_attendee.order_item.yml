@@ -12,10 +12,7 @@ dependencies:
     - field.field.participant.lai_conference_attendee.field_dietary_restrictions
     - field.field.participant.lai_conference_attendee.field_industry
     - field.field.participant.lai_conference_attendee.field_job_title
-    - field.field.participant.lai_conference_attendee.field_need_hrci_credits
-    - field.field.participant.lai_conference_attendee.field_need_shrm_credits
     - field.field.participant.lai_conference_attendee.field_phone
-    - field.field.participant.lai_conference_attendee.field_states
   module:
     - address_display
     - user
@@ -101,7 +98,4 @@ hidden:
   field_dietary_restrictions: true
   field_industry: true
   field_job_title: true
-  field_need_hrci_credits: true
-  field_need_shrm_credits: true
   field_phone: true
-  field_states: true

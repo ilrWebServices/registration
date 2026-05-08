@@ -11,10 +11,7 @@ dependencies:
     - field.field.participant.lai_conference_attendee.field_dietary_restrictions
     - field.field.participant.lai_conference_attendee.field_industry
     - field.field.participant.lai_conference_attendee.field_job_title
-    - field.field.participant.lai_conference_attendee.field_need_hrci_credits
-    - field.field.participant.lai_conference_attendee.field_need_shrm_credits
     - field.field.participant.lai_conference_attendee.field_phone
-    - field.field.participant.lai_conference_attendee.field_states
   module:
     - address_display
     - options
@@ -129,26 +126,6 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
-  field_need_hrci_credits:
-    type: boolean
-    label: above
-    settings:
-      format: yes-no
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 17
-    region: content
-  field_need_shrm_credits:
-    type: boolean
-    label: above
-    settings:
-      format: yes-no
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 18
-    region: content
   field_phone:
     type: telephone_link
     label: above
@@ -156,13 +133,6 @@ content:
       title: ''
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_states:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 14
     region: content
   mail:
     type: email_mailto
