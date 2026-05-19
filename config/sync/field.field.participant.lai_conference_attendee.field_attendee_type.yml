@@ -1,0 +1,21 @@
+uuid: 70a2dda7-bf8c-4b4e-ac39-77b3c26e72f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_attendee_type
+  module:
+    - options
+id: participant.lai_conference_attendee.field_attendee_type
+field_name: field_attendee_type
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'What best describes the role of this attendee?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

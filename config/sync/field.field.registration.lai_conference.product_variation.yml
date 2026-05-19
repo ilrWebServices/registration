@@ -1,0 +1,21 @@
+uuid: 7beaad6b-c500-4dc4-af86-997601227a60
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.registration_type.lai_conference
+    - field.storage.registration.product_variation
+id: registration.lai_conference.product_variation
+field_name: product_variation
+entity_type: registration
+bundle: lai_conference
+label: Variation
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: erf_commerce_variation
+  handler_settings: {  }
+field_type: entity_reference

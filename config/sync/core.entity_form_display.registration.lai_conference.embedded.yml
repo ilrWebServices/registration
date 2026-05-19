@@ -1,0 +1,53 @@
+uuid: eaa589d7-9d97-448a-b613-63bd66c4ad8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.participant.inline
+    - core.entity_form_mode.registration.embedded
+    - erf.registration_type.lai_conference
+    - field.field.registration.lai_conference.field_source
+    - field.field.registration.lai_conference.participants
+    - field.field.registration.lai_conference.product_variation
+  module:
+    - erf_commerce
+    - inline_entity_form
+id: registration.lai_conference.embedded
+targetEntityType: registration
+bundle: lai_conference
+mode: embedded
+content:
+  field_source:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  participants:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: inline
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  product_variation:
+    type: rendered_variations
+    weight: 0
+    region: content
+    settings:
+      variation_view_mode: cart
+    third_party_settings: {  }
+hidden:
+  locked: true
+  user_id: true

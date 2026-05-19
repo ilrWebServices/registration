@@ -1,0 +1,42 @@
+uuid: 29d41acb-f9fc-4f8c-b557-53073ce265a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_address
+  module:
+    - address
+id: participant.lai_conference_attendee.field_address
+field_name: field_address
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Work address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: required
+    additionalName:
+      override: hidden
+    familyName:
+      override: required
+    organization:
+      override: required
+    addressLine3:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address
