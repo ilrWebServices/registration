@@ -7,6 +7,7 @@ dependencies:
     - erf.registration_type.groat_alpern_single
     - erf.registration_type.groat_alpern_sponsorship
     - erf.registration_type.international_summer_debate_camp
+    - erf.registration_type.lai_conference
     - erf.registration_type.simple_class
     - filter.format.basic_html
   module:
@@ -29,6 +30,7 @@ permissions:
   - 'create groat_alpern_single registrations'
   - 'create groat_alpern_sponsorship registrations'
   - 'create international_summer_debate_camp registrations'
+  - 'create lai_conference registrations'
   - 'create simple_class registrations'
   - 'manage own registrations'
   - 'use text format basic_html'
