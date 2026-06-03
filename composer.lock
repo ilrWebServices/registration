@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b479f6efd8206742b07b515d0a1bef89",
+    "content-hash": "c63da7b4e7a236e08dc6d12aaddbb8fb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -124,16 +124,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v2.2.4",
+            "version": "v2.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "ea826dbe5b3fe76960073a2167d5cf996c811cda"
+                "reference": "15b789e5e6ededaf803d23c56cdc300a94522a7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/ea826dbe5b3fe76960073a2167d5cf996c811cda",
-                "reference": "ea826dbe5b3fe76960073a2167d5cf996c811cda",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/15b789e5e6ededaf803d23c56cdc300a94522a7c",
+                "reference": "15b789e5e6ededaf803d23c56cdc300a94522a7c",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 "mikey179/vfsstream": "^1.6.11",
                 "phpunit/phpunit": "^9.6",
                 "squizlabs/php_codesniffer": "^3.7",
-                "symfony/validator": "^5.4 || ^6.3 || ^7.0"
+                "symfony/validator": "^5.4 || ^6.3 || ^7.0 || ^8.0"
             },
             "suggest": {
                 "symfony/validator": "to validate addresses"
@@ -182,9 +182,9 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v2.2.4"
+                "source": "https://github.com/commerceguys/addressing/tree/v2.2.5"
             },
-            "time": "2025-01-13T16:03:24+00:00"
+            "time": "2026-01-05T13:00:32+00:00"
         },
         {
             "name": "commerceguys/intl",
@@ -1512,17 +1512,17 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "3.2.0",
+            "version": "3.3.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "3.2.0"
+                "reference": "3.3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-3.2.0.zip",
-                "reference": "3.2.0",
-                "shasum": "020b19a4f733f1ba4041ef5ca4b7c744288d1325"
+                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.6.zip",
+                "reference": "3.3.6",
+                "shasum": "f24284baa909731a047dfdbadde03099ca79a3f0"
             },
             "require": {
                 "commerceguys/intl": "^2.0.6",
@@ -1558,8 +1558,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.2.0",
-                    "datestamp": "1758806664",
+                    "version": "3.3.6",
+                    "datestamp": "1780503017",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2644,6 +2644,10 @@
                 {
                     "name": "tr",
                     "homepage": "https://www.drupal.org/user/202830"
+                },
+                {
+                    "name": "tstoeckler",
+                    "homepage": "https://www.drupal.org/user/107158"
                 }
             ],
             "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
@@ -2655,20 +2659,23 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.12.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
-                "reference": "8.x-1.12"
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "2a2ff8617c7ce01b56df1caaf0a563da04948e26"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "cb900e41124979a46da1912ff2b502270beda632"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11"
+                "drupal/core": "^10.2 || ^11"
+            },
+            "conflict": {
+                "drush/drush": "<12.5.1"
             },
             "require-dev": {
                 "drupal/diff": "^1 || ^2"
@@ -2676,16 +2683,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1722804497",
+                    "version": "8.x-1.14",
+                    "datestamp": "1767266825",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10 || ^11"
                     }
                 }
             },
@@ -2699,7 +2701,7 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Frans",
+                    "name": "frans",
                     "homepage": "https://www.drupal.org/user/514222"
                 },
                 {
@@ -3107,17 +3109,17 @@
         },
         {
             "name": "drupal/profile",
-            "version": "1.12.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/profile.git",
-                "reference": "8.x-1.12"
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "9fd145bb88da900edc34727dd30ec0a230ceb875"
+                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "eda73cb55a9034b318fb87bc9f8db4b778c4fdd6"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11",
@@ -3131,8 +3133,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1742292282",
+                    "version": "8.x-1.14",
+                    "datestamp": "1765287779",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3422,17 +3424,17 @@
         },
         {
             "name": "drupal/state_machine",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/state_machine.git",
-                "reference": "8.x-1.13"
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/state_machine-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "7b676068295b412e049d1915daf52225f1044ace"
+                "url": "https://ftp.drupal.org/files/projects/state_machine-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "7fdf6f65be647e2e4a44b56f724aab57e7a675ed"
             },
             "require": {
                 "drupal/core": "^9.2 || ^10.1 || ^11",
@@ -3444,8 +3446,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1746459629",
+                    "version": "8.x-1.14",
+                    "datestamp": "1770883116",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3478,7 +3480,7 @@
                     "homepage": "https://www.drupal.org/user/189123"
                 },
                 {
-                    "name": "Elijah Lynn",
+                    "name": "elijah lynn",
                     "homepage": "https://www.drupal.org/user/353190"
                 },
                 {
