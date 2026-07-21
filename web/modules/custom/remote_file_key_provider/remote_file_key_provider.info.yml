@@ -1,0 +1,7 @@
+name: 'Remote File Key Provider'
+type: module
+description: 'Gets key values stored in http locations.'
+package: Key
+core_version_requirement: ^10 || ^11
+dependencies:
+  - key
