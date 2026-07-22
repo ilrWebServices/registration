@@ -1,4 +1,9 @@
 services:
+  ilr_outreach_discount_auto:
+    class: '\Drupal\ilr_outreach_discounts\IlrOutreachAutoDiscountOrderProcessor'
+    arguments: ['@ilr_outreach_discount_manager']
+    tags:
+      - { name: commerce_order.order_processor, priority: 200 }
   ilr_outreach_discount:
     class: '\Drupal\ilr_outreach_discounts\IlrOutreachDiscountOrderProcessor'
     tags:

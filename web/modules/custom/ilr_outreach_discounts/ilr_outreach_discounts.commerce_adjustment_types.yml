@@ -4,3 +4,9 @@ ilr_outreach_discount:
   plural_label: 'discounts'
   has_ui: TRUE
   weight: 10
+ilr_outreach_auto_discount:
+  label: 'ILR Outreach auto discount'
+  singular_label: 'auto discount'
+  plural_label: 'auto discounts'
+  has_ui: TRUE
+  weight: 9
