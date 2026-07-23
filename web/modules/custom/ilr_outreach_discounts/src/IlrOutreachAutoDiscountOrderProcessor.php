@@ -59,12 +59,24 @@ class IlrOutreachAutoDiscountOrderProcessor implements OrderProcessorInterface {
         $adjustment_amount = (new Price($discount->value, 'USD'))->multiply($order_item->getQuantity());
       }
 
-      // Apply the discount.
+      // Change the base unit price itself so that a) the reduced amount appears
+      // as the price of the item and b) further adjustments (e.g. non-profit
+      // discounts) use this value. We add the adjustment amount here because
+      // our IlrDiscount->value property is negative.
+      $unit_price = $order_item->getUnitPrice();
+      $unit_price = $unit_price->add($adjustment_amount);
+      $order_item->setUnitPrice($unit_price);
+
+      // Add an adjustment, but set it as included, which prevents it from a)
+      // further changing the price of the item and b) displaying it to the
+      // user. It's here as a way for us to later figure out why the price was
+      // modified.
       $order_item->addAdjustment(new Adjustment([
         'type' => 'ilr_outreach_auto_discount',
         'label' => $discount->description,
         'amount' => $adjustment_amount,
         'percentage' => ($discount->type === 'percentage') ? (string) $discount->value : NULL,
+        'included' => TRUE,
       ]));
     }
   }
