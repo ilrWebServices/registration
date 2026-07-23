@@ -40,7 +40,7 @@ class ManualWithRemoteId extends Manual {
   /**
    * {@inheritdoc}
    */
-  public function receivePayment(PaymentInterface $payment, Price $amount = NULL, $remote_id = NULL) {
+  public function receivePayment(PaymentInterface $payment, ?Price $amount = NULL, $remote_id = NULL) {
     $this->assertPaymentState($payment, ['pending']);
 
     // If not specified, use the entire amount.
