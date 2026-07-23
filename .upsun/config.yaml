@@ -22,7 +22,7 @@ applications:
             flavor: none
         dependencies:
             php:
-                composer/composer: '~2.9.0'
+                composer/composer: '~2.10'
         hooks:
             build: |
                 set -e
