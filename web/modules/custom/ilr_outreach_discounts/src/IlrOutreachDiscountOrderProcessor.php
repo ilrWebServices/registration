@@ -50,8 +50,6 @@ class IlrOutreachDiscountOrderProcessor implements OrderProcessorInterface {
           'amount' => $adjustment_amount,
           'percentage' => ($discount->type === 'percentage') ? (string) $discount->value : NULL,
         ]));
-
-        $order_item->save();
       }
     }
   }
