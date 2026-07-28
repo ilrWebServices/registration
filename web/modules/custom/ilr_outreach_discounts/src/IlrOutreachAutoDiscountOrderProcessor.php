@@ -63,6 +63,9 @@ class IlrOutreachAutoDiscountOrderProcessor implements OrderProcessorInterface {
       $order_item->addAdjustment(new Adjustment([
         'type' => 'ilr_outreach_auto_discount',
         'label' => $discount->description,
+        // This source_id is a hacky CSV. This allows us to parse out the sfid
+        // and code for serializing.
+        'source_id' => $discount->sfid . ',' . $discount->code,
         'amount' => $adjustment_amount,
         'percentage' => ($discount->type === 'percentage') ? (string) $discount->value : NULL,
       ]));

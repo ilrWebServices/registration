@@ -209,6 +209,18 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
 
           $discounts[] = $discount;
         }
+        elseif ($item_adjustment->getType() === 'ilr_outreach_auto_discount') {
+          [$sfid, $code] = explode(',', $item_adjustment->getSourceId());
+          $discount = [
+            "sfid" => $sfid,
+            "code" => $code,
+            "type" => $item_adjustment->getPercentage() ? 'percentage' : 'fixed_amount',
+            "amount" => (float) $item_adjustment->getAmount()->getNumber(),
+            "percentage" => (float) $item_adjustment->getPercentage(),
+          ];
+
+          $discounts[] = $discount;
+        }
       }
 
       // Process registrations and participants for this item.

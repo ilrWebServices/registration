@@ -2855,12 +2855,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ilrWebServices/ilr_outreach_discount_api.git",
-                "reference": "06415f44c5164e9b8349a87cff445bf7b98fb2cf"
+                "reference": "d41e2b668207d1686076728972f048cb78de2f13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilrWebServices/ilr_outreach_discount_api/zipball/06415f44c5164e9b8349a87cff445bf7b98fb2cf",
-                "reference": "06415f44c5164e9b8349a87cff445bf7b98fb2cf",
+                "url": "https://api.github.com/repos/ilrWebServices/ilr_outreach_discount_api/zipball/d41e2b668207d1686076728972f048cb78de2f13",
+                "reference": "d41e2b668207d1686076728972f048cb78de2f13",
                 "shasum": ""
             },
             "require": {
@@ -2873,7 +2873,7 @@
                 "source": "https://github.com/ilrWebServices/ilr_outreach_discount_api/tree/1.x",
                 "issues": "https://github.com/ilrWebServices/ilr_outreach_discount_api/issues"
             },
-            "time": "2026-07-23T16:46:04+00:00"
+            "time": "2026-07-28T16:22:45+00:00"
         },
         {
             "name": "drupal/inline_entity_form",
