@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override for the registration_type field when there are no variations.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ * @see ilr_registrations_theme_suggestions_field_alter()
+ */
+#}
+<p>
+{% trans %}Registration for this conference is unavailable. It may be cancelled or full. Please contact <a href="ilrcustomerservice@cornell.edu">customer service</a> for more information.{% endtrans %}
+</p>
