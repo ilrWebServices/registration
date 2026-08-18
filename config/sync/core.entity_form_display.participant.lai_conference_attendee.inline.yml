@@ -76,7 +76,7 @@ content:
     weight: 2
     region: content
     settings:
-      placeholder: 'email address'
+      placeholder: 'Please use the email address of the actual participant.'
       size: 100
     third_party_settings: {  }
 hidden:

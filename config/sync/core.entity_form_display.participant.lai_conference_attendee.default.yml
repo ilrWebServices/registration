@@ -83,7 +83,7 @@ content:
     weight: -10
     region: content
     settings:
-      placeholder: ''
+      placeholder: 'Please use the email address of the actual participant.'
       size: 100
     third_party_settings: {  }
   uid:
