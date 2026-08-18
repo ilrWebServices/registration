@@ -1,7 +1,7 @@
 applications:
     register:
         container_profile: HIGH_CPU
-        type: 'php:8.3'
+        type: 'php:8.4'
         relationships:
             mariadb:
         runtime:
