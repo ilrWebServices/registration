@@ -39,7 +39,7 @@ class EmailValidator extends EmailValidatorUtility implements EmailValidatorInte
     // email. In addition to `RFCValidation`, the `DNSCheckValidation` is used.
     $validations = new MultipleValidationWithAnd([
       new RFCValidation(),
-      // new DNSCheckValidation(),
+      new DNSCheckValidation(),
     ]);
 
     return parent::isValid($email, $validations);
