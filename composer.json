@@ -72,7 +72,7 @@
     "drupal/typed_data": "^2",
     "drupal/union_organizer": "dev-union_ng",
     "drush/drush": "^13",
-    "firebase/php-jwt": "^6.0",
+    "firebase/php-jwt": "^7",
     "ilrwebservices/cardpointe-gateway-rest-api-client": "^1.0",
     "symfony/dotenv": "^7.1"
   },
