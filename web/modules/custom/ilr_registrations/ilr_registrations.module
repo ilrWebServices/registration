@@ -675,8 +675,6 @@ function ilr_registrations_menu_links_discovered_alter(&$links) {
  *   The field definition.
  * @param \Drupal\Core\Entity\ContentEntityInterface|null $entity
  *   The entity being created if applicable.
- * @param bool $cacheable
- *   Boolean indicating if the results are cacheable.
  *
  * @return array
  *   An array of possible key and value options.
@@ -684,7 +682,7 @@ function ilr_registrations_menu_links_discovered_alter(&$links) {
  * @see options_allowed_values()
  * @todo Consider using the SF API to dynamically generate this list.
  */
-function ilr_registrations_industry_options(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL, $cacheable) {
+function ilr_registrations_industry_options(FieldStorageConfig $definition, ?ContentEntityInterface $entity = NULL) {
   $options = [
     '11 Agriculture, Forestry, Fishing and Hunting' => 'Agriculture, Forestry, Fishing and Hunting',
     '21 Mining, Quarrying, and Oil and Gas Extraction' => 'Mining, Quarrying, and Oil and Gas Extraction',
