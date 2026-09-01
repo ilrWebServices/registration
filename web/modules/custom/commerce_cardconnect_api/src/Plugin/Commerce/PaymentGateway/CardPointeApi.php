@@ -253,7 +253,7 @@ class CardPointeApi extends OnsitePaymentGatewayBase implements SupportsRefundsI
   /**
    * {@inheritdoc}
    */
-  public function refundPayment(PaymentInterface $payment, Price $amount = NULL) {
+  public function refundPayment(PaymentInterface $payment, ?Price $amount = NULL) {
     $this->assertPaymentState($payment, ['completed', 'partially_refunded']);
     // If not specified, refund the entire amount.
     $amount = $amount ?: $payment->getAmount();
