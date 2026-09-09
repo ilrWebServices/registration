@@ -7,6 +7,7 @@ dependencies:
     - field.field.commerce_order.registration.field_payment_owner
   module:
     - commerce_order
+    - commerce_payment
     - options
     - state_machine
     - user
@@ -15,6 +16,15 @@ targetEntityType: commerce_order
 bundle: registration
 mode: default
 content:
+  billing_profile:
+    type: commerce_billing_information
+    label: hidden
+    settings:
+      profile_view_mode: admin
+      show_payment_information: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   completed:
     type: timestamp
     label: above
@@ -33,6 +43,41 @@ content:
         refresh: 60
     third_party_settings: {  }
     weight: 0
+    region: content
+  coupons:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  created:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  customer_comments:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_payment_owner:
     type: list_default
@@ -58,11 +103,12 @@ content:
     region: content
   order_items:
     type: commerce_order_item_table
-    label: above
+    label: hidden
     settings:
       view: registration_order_items
+      show_add_items_link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 16
     region: content
   placed:
     type: timestamp
@@ -108,7 +154,6 @@ content:
     region: content
 hidden:
   balance: true
-  billing_profile: true
   changed: true
   order_number: true
   store_id: true

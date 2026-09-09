@@ -152,10 +152,8 @@
         "Allow relative format strings in views date filters": "patches/core-views_date_relative.patch"
       },
       "drupal/commerce": {
-        "Improve order argument for order total Views field": "patches/commerce-order_total_handler.patch",
         "Add block visibility conditions for store type and product type": "https://www.drupal.org/files/issues/2020-05-16/commerce-2918708-11.patch",
-        "Issue #3277471: Fix conditional build of payment method add form in the payment information pane": "patches/commerce-payment_info_pane_method_zero_total.patch",
-        "Issue #3546040: Mismatched entity and/or field definitions": "https://git.drupalcode.org/project/commerce/-/commit/e9a4db29a1b30945f92717a281b5a46454ec87f9.diff"
+        "Issue #3277471: Fix conditional build of payment method add form in the payment information pane": "patches/commerce-payment_info_pane_method_zero_total.patch"
       }
     }
   }

@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_type.groat_alpern_awards
   module:
     - commerce_order
+    - commerce_payment
     - state_machine
     - user
 id: commerce_order.groat_alpern_awards.default
@@ -13,6 +14,15 @@ targetEntityType: commerce_order
 bundle: groat_alpern_awards
 mode: default
 content:
+  billing_profile:
+    type: commerce_billing_information
+    label: hidden
+    settings:
+      profile_view_mode: admin
+      show_payment_information: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   completed:
     type: timestamp
     label: above
@@ -32,6 +42,41 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  coupons:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  created:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  customer_comments:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
   ip_address:
     type: string
     label: above
@@ -49,11 +94,12 @@ content:
     region: content
   order_items:
     type: commerce_order_item_table
-    label: above
+    label: hidden
     settings:
-      order_item_view: registration_order_items
+      view: commerce_order_item_table_admin
+      show_add_items_link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 15
     region: content
   placed:
     type: timestamp
@@ -83,13 +129,6 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-  total_price:
-    type: commerce_order_total_summary
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
   uid:
     type: author
     label: above
@@ -99,8 +138,8 @@ content:
     region: content
 hidden:
   balance: true
-  billing_profile: true
   changed: true
   order_number: true
   store_id: true
   total_paid: true
+  total_price: true
