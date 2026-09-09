@@ -50,6 +50,8 @@ module:
   inline_entity_form: 0
   key: 0
   link: 0
+  mailer_override: 0
+  mailer_policy: 0
   mailer_transport: 0
   mysql: 0
   node: 0

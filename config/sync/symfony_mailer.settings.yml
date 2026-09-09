@@ -1,7 +1,0 @@
-_core:
-  default_config_hash: 4qVz27mvzjCZOQkd03vi4Ipqcf8m53p6xPVW-G0tXIA
-default_transport: smtp
-override:
-  commerce_order_type: 3
-  user: 3
-  update: 3

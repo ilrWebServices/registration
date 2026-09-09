@@ -986,14 +986,14 @@ $settings['config_ignore_pattern_debug'] = TRUE;
  * the fallback.
  */
 if (getenv('SMTP_HOST')) {
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['host'] = getenv('SMTP_HOST');
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['port'] = getenv('SMTP_PORT') ?: 587;
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['user'] = getenv('SMTP_USER');
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['pass'] = getenv('SMTP_PASS');
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['host'] = getenv('SMTP_HOST');
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['port'] = getenv('SMTP_PORT') ?: 587;
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['user'] = getenv('SMTP_USER');
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['pass'] = getenv('SMTP_PASS');
 }
 elseif (getenv('PLATFORM_SMTP_HOST')) {
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['host'] = getenv('PLATFORM_SMTP_HOST');
-  $config['symfony_mailer.mailer_transport.smtp']['configuration']['port'] = 25;
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['host'] = getenv('PLATFORM_SMTP_HOST');
+  $config['mailer_transport.mailer_transport.smtp']['configuration']['port'] = 25;
 }
 
 /**

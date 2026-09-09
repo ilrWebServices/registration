@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa3ce29641c5f8f9ac94c0435615514c",
+    "content-hash": "2ce435bcd5d3ea9fbe19d2b695346842",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3041,16 +3041,16 @@
         },
         {
             "name": "drupal/mailer_transport",
-            "version": "1.6.2",
+            "version": "2.0.2",
             "require": {
                 "drupal/core": "^10.3 || ^11",
-                "drupal/symfony_mailer": "^1"
+                "drupal/symfony_mailer": "^2"
             },
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "1.6.2",
-                    "datestamp": "1751013031",
+                    "version": "2.0.2",
+                    "datestamp": "1784974467",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3067,7 +3067,7 @@
                     "homepage": "https://www.drupal.org/user/2650563"
                 }
             ],
-            "description": "Placeholder to support upgrade to v2.x",
+            "description": "Configuration UI for Symfony Mailer Transports",
             "homepage": "https://www.drupal.org/project/symfony_mailer",
             "support": {
                 "source": "https://git.drupalcode.org/project/symfony_mailer"
@@ -3515,17 +3515,17 @@
         },
         {
             "name": "drupal/symfony_mailer",
-            "version": "1.6.2",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/symfony_mailer.git",
-                "reference": "1.6.2"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/symfony_mailer-1.6.2.zip",
-                "reference": "1.6.2",
-                "shasum": "78e829eb05e35c868b0e74b1d8f89cf8e4acbd50"
+                "url": "https://ftp.drupal.org/files/projects/symfony_mailer-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "abf2c701aac43d73157b9d935155b25d0dc878e5"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -3534,11 +3534,16 @@
                 "symfony/mailer": "^6.0 || ^7.0",
                 "tijsverkoyen/css-to-inline-styles": "^2.2"
             },
+            "require-dev": {
+                "drupal/commerce": "^3",
+                "drupal/mailer_policy": "*",
+                "drupal/simplenews": "^4.1"
+            },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.6.2",
-                    "datestamp": "1751013031",
+                    "version": "2.0.2",
+                    "datestamp": "1784974467",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3560,7 +3565,7 @@
                     "homepage": "https://www.drupal.org/user/2650563"
                 }
             ],
-            "description": "Symfony Mailer",
+            "description": "Mailer Plus",
             "homepage": "https://www.drupal.org/project/symfony_mailer",
             "support": {
                 "source": "https://git.drupalcode.org/project/symfony_mailer"
@@ -9142,23 +9147,23 @@
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "0d72ac1c00084279c1816675284073c5a337c20d"
+                "reference": "f0292ccf0ec75843d65027214426b6b163b48b41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0d72ac1c00084279c1816675284073c5a337c20d",
-                "reference": "0d72ac1c00084279c1816675284073c5a337c20d",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/f0292ccf0ec75843d65027214426b6b163b48b41",
+                "reference": "f0292ccf0ec75843d65027214426b6b163b48b41",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "php": "^7.4 || ^8.0",
-                "symfony/css-selector": "^5.4 || ^6.0 || ^7.0"
+                "symfony/css-selector": "^5.4 || ^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
                 "phpstan/phpstan": "^2.0",
@@ -9191,9 +9196,9 @@
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
-                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.4.0"
             },
-            "time": "2024-12-21T16:25:41+00:00"
+            "time": "2025-12-02T11:56:42+00:00"
         },
         {
             "name": "twig/twig",
