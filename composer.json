@@ -78,6 +78,7 @@
   },
   "require-dev": {
     "drupal/core-dev": "^10",
+    "drupal/upgrade_status": "^4.3",
     "palantirnet/drupal-rector": "^0.20",
     "phpcompatibility/php-compatibility": "dev-develop"
   },
