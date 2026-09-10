@@ -1,7 +1,7 @@
 name: 'ILR Groat/Alpern'
 type: module
 description: 'Update hooks and misc custom code for Groat/Alpern registrations'
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 package: 'ILR'
 dependencies:
   - erf:erf_commerce
