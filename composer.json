@@ -18,8 +18,7 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://packages.drupal.org/8",
-      "exclude": ["drupal/persistent_visitor_parameters"]
+      "url": "https://packages.drupal.org/8"
     },
     {
       "type": "vcs",
@@ -32,10 +31,6 @@
     {
       "type": "vcs",
       "url": "https://github.com/ilrWebServices/ilr_outreach_discount_api.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ilrWebServices/persistent_visitor_parameters.git"
     },
     {
       "type": "vcs",
@@ -63,7 +58,7 @@
     "drupal/ilr_analytics_session": "dev-main",
     "drupal/ilr_outreach_discount_api": "^1",
     "drupal/key": "^1.14",
-    "drupal/persistent_visitor_parameters": "^3",
+    "drupal/persistent_visitor_parameters": "^2",
     "drupal/queue_ui": "^3.0",
     "drupal/salesforce": "^5",
     "drupal/samlauth": "^3.0",

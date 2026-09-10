@@ -177,6 +177,6 @@ if (getenv('PLATFORM_ENVIRONMENT_TYPE') == 'production') {
   $config['samlauth.authentication']['security_authn_requests_sign'] = TRUE;
   $config['samlauth.authentication']['security_assertions_encrypt'] = TRUE;
 
-  // Load the production services file alongside this settings file.
-  $settings['container_yamls'][] = __DIR__ . '/production.services.yml';
+  // Override the persistent_visitor_parameter cookie domain.
+  $config['persistent_visitor_parameters.settings']['persistor_domain'] = '.ilr.cornell.edu';
 }
