@@ -927,18 +927,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ilrWebServices/union.git",
-                "reference": "65c960151302d0252eb26a3aaed1ab82d16b536b"
+                "reference": "732d78edcf4d6d9b84e7def174e2faea6e60bd0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilrWebServices/union/zipball/65c960151302d0252eb26a3aaed1ab82d16b536b",
-                "reference": "65c960151302d0252eb26a3aaed1ab82d16b536b",
+                "url": "https://api.github.com/repos/ilrWebServices/union/zipball/732d78edcf4d6d9b84e7def174e2faea6e60bd0b",
+                "reference": "732d78edcf4d6d9b84e7def174e2faea6e60bd0b",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.8",
                 "phpdocumentor/reflection-docblock": "^5.3",
-                "symfony/yaml": "^4.4.19 || ^5 || ^6",
+                "symfony/yaml": "^6 || ^7",
                 "twig/twig": "^2 || ^3"
             },
             "default-branch": true,
@@ -966,7 +966,7 @@
                 "source": "https://github.com/ilrWebServices/union/tree/master",
                 "issues": "https://github.com/ilrWebServices/union/issues"
             },
-            "time": "2026-05-07T19:20:44+00:00"
+            "time": "2026-09-01T15:01:53+00:00"
         },
         {
             "name": "cweagans/composer-patches",
