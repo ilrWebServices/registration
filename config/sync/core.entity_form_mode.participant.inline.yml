@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ilr_registrations
+    - erf
 id: participant.inline
 label: Inline
-description: ''
+description: null
 targetEntityType: participant
 cache: true

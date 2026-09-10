@@ -6,6 +6,6 @@ dependencies:
     - commerce_order
 id: commerce_order.order_details
 label: 'Order details'
-description: ''
+description: null
 targetEntityType: commerce_order
 cache: true
