@@ -153,7 +153,6 @@ function ilr_groat_inline_entity_form_table_fields_alter(array &$fields, array $
           'field_settings' => [
             'givenName' => 'givenName',
             'familyName' => 'familyName',
-            'organization' => 0,
             'additionalName' => 0,
             'organization' => 0,
             'addressLine1' => 0,
