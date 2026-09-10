@@ -1,6 +1,0 @@
-widget:
-  version: VERSION
-  js:
-    js/commerce_order_item_render.widget.js: {}
-  dependencies:
-    - core/once
