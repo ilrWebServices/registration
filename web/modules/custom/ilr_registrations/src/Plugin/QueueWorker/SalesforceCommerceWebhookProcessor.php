@@ -139,32 +139,6 @@ class SalesforceCommerceWebhookProcessor extends QueueWorkerBase implements Cont
     if (!$customer_user->isAnonymous()) {
       $this->createMapping($contact_mapping, $sf_customer_contact_object, $customer_user);
     }
-
-    // Map the salesforce participants to the Drupal participant entities and,
-    // if set, their associated user entities.
-    // @todo Refactor if we ever use other participant types.
-    $participant_mapping = $this->entityTypeManager->getStorage('salesforce_mapping')->load('basic_participant');
-
-    // Get SF EXECED_Application__c for this Order_c.
-    $sf_application_query = new SelectQuery('EXECED_Application__c');
-    $sf_application_query->fields[] = 'Id';
-    $sf_application_query->addCondition('Order__c', "'" . $sf_order_object->id() . "'");
-    $sf_application_results = $this->sfapi->query($sf_application_query);
-
-    foreach ($sf_application_results->records() as $sf_application) {
-      // Get SF EXECED_Participant__c for this EXECED_Application__c.
-      $sf_participant_query = new SelectQuery('EXECED_Participant__c');
-      $sf_participant_query->fields = ['Id', 'POS_Participant_Id__c', 'Contact__c'];
-      $sf_participant_query->addCondition('Application__c', "'" . $sf_application->id() . "'");
-      $sf_participant_results = $this->sfapi->query($sf_participant_query);
-
-      foreach ($sf_participant_results->records() as $sf_participant) {
-        $participant = $this->entityTypeManager->getStorage('participant')->load((int) $sf_participant->field('POS_Participant_Id__c'));
-        $this->createMapping($participant_mapping, $sf_participant, $participant);
-      }
-    }
-
-    // @todo Map the salesforce payment(s) to Commerce payment(s).
   }
 
   /**
