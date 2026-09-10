@@ -1,7 +1,7 @@
 name: 'ILR Commerce Manual Payments'
 type: module
 description: 'Commerce 2.x payment gateway plugin for Manual payments with Remote ID'
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 package: 'Commerce (contrib)'
 dependencies:
   - commerce:commerce_payment

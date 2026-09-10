@@ -1,7 +1,7 @@
 name: 'ILR Outreach Discounts'
 type: module
 description: 'Custom order adjustments for discounts defined in Salesforce.'
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 package: 'ILR'
 dependencies:
   - commerce:commerce_order

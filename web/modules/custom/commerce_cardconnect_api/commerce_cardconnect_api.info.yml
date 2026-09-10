@@ -1,7 +1,7 @@
 name: 'Commerce CardConnect API Payment'
 type: module
 description: 'Commerce 2.x payment gateway plugin for CardConnect CardPointe Gateway API'
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 package: 'Commerce (contrib)'
 dependencies:
   - commerce:commerce_payment

@@ -1,7 +1,0 @@
-name: 'Commerce Order Item Render Widget'
-type: module
-description: 'Includes an Order Item Purchased Entity widget that displays a rendered variation in a radio button list.'
-core_version_requirement: ^9.5 || ^10
-package: 'Commerce'
-dependencies:
-  - commerce:commerce_product

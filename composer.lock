@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ce435bcd5d3ea9fbe19d2b695346842",
+    "content-hash": "4e0866f69038a8819c3481620a1ac2ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2728,11 +2728,11 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/erf.git",
-                "reference": "32526b8aa61c12bf5f4631fdbf5762a80d741e7f"
+                "reference": "5eb87057113d86baa164bf7431c7badbeffe855e"
             },
             "require": {
-                "drupal/core": "^9.5 || ^10",
-                "drupal/inline_entity_form": "^1.0-rc4"
+                "drupal/core": "^9.5 || ^10 || ^11",
+                "drupal/inline_entity_form": "^3"
             },
             "require-dev": {
                 "drupal/commerce_cart": "*",
@@ -2745,8 +2745,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "2.0.0-beta2+1-dev",
-                    "datestamp": "1754341255",
+                    "version": "2.0.0-beta2+8-dev",
+                    "datestamp": "1789048084",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2874,20 +2874,21 @@
         },
         {
             "name": "drupal/inline_entity_form",
-            "version": "1.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/inline_entity_form.git",
-                "reference": "8.x-1.0"
+                "reference": "3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "0e3fe9fc880e46d9e9393be6fc4ed12838ecdaee"
+                "url": "https://ftp.drupal.org/files/projects/inline_entity_form-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "43417cf232df36d6a621151dffa569b77dfd9725"
             },
             "require": {
-                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/core": "^8.8 || ^9 || ^10 || ^11",
+                "drupal/rat": "^1.0.0@stable",
                 "php": ">=7.1"
             },
             "require-dev": {
@@ -2896,8 +2897,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1780695546",
+                    "version": "3.0.0",
+                    "datestamp": "1780695753",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3075,32 +3076,59 @@
         },
         {
             "name": "drupal/persistent_visitor_parameters",
-            "version": "3.x-dev",
+            "version": "2.0.0-beta1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ilrWebServices/persistent_visitor_parameters.git",
-                "reference": "81ade2ace1c801169ce422efac324602531f3bbc"
+                "url": "https://git.drupalcode.org/project/persistent_visitor_parameters.git",
+                "reference": "2.0.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilrWebServices/persistent_visitor_parameters/zipball/81ade2ace1c801169ce422efac324602531f3bbc",
-                "reference": "81ade2ace1c801169ce422efac324602531f3bbc",
-                "shasum": ""
+                "url": "https://ftp.drupal.org/files/projects/persistent_visitor_parameters-2.0.0-beta1.zip",
+                "reference": "2.0.0-beta1",
+                "shasum": "38feadf221c1070d4fab0db93f206a231c6e1e56"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11 || ^12"
             },
             "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0-beta1",
+                    "datestamp": "1787842880",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "criz",
+                    "homepage": "https://www.drupal.org/user/71764"
+                },
+                {
+                    "name": "dejan0",
+                    "homepage": "https://www.drupal.org/user/3634531"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                }
             ],
             "description": "Checks GET and HTTP Request parameters from anonymous visitors, and saves those in a cookie for further processing",
-            "homepage": "https://github.com/ilrWebServices/persistent_visitor_parameters",
-            "keywords": [
-                "Drupal"
-            ],
+            "homepage": "https://www.drupal.org/project/persistent_visitor_parameters",
             "support": {
-                "issues": "https://github.com/ilrWebServices/persistent_visitor_parameters/issues",
-                "source": "https://github.com/ilrWebServices/persistent_visitor_parameters.git"
-            },
-            "time": "2023-11-30T15:44:47+00:00"
+                "source": "https://git.drupalcode.org/project/persistent_visitor_parameters"
+            }
         },
         {
             "name": "drupal/profile",
@@ -3255,6 +3283,48 @@
                 "source": "https://git.drupalcode.org/project/queue_ui",
                 "issues": "https://www.drupal.org/project/issues/queue_ui"
             }
+        },
+        {
+            "name": "drupal/rat",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rat.git",
+                "reference": "f13fcfb83445e505ffa84d2137231d91cd8c8146"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://git.drupalcode.org/api/v4/projects/project%2Frat/repository/archive.zip?sha=f13fcfb83445e505ffa84d2137231d91cd8c8146",
+                "reference": "f13fcfb83445e505ffa84d2137231d91cd8c8146",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "drupal/core": "^9.4",
+                "drupal/core-dev": "^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\rat\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "gpl-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Merlin",
+                    "email": "merlin@geeks4change.net"
+                }
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/rat/-/tree/1.0.1"
+            },
+            "time": "2025-12-29T15:30:47+00:00"
         },
         {
             "name": "drupal/salesforce",
@@ -3694,18 +3764,19 @@
         },
         {
             "name": "drupal/union_organizer",
-            "version": "dev-union_ng",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ilrWebServices/union_organizer.git",
-                "reference": "39c0646695167309f434c5862561f9888051f369"
+                "reference": "f55f5f759b230d0cc09e54fe370c9f0016233c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilrWebServices/union_organizer/zipball/39c0646695167309f434c5862561f9888051f369",
-                "reference": "39c0646695167309f434c5862561f9888051f369",
+                "url": "https://api.github.com/repos/ilrWebServices/union_organizer/zipball/f55f5f759b230d0cc09e54fe370c9f0016233c51",
+                "reference": "f55f5f759b230d0cc09e54fe370c9f0016233c51",
                 "shasum": ""
             },
+            "default-branch": true,
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
@@ -3719,7 +3790,7 @@
                 "issues": "https://github.com/ilrWebServices/union_organizer/issues",
                 "source": "https://github.com/ilrWebServices/union_organizer.git"
             },
-            "time": "2023-11-30T19:27:03+00:00"
+            "time": "2026-03-13T16:49:21+00:00"
         },
         {
             "name": "drush/drush",
@@ -10260,6 +10331,55 @@
             "time": "2026-05-06T08:26:05+00:00"
         },
         {
+            "name": "dekor/php-array-table",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deniskoronets/php-array-table.git",
+                "reference": "ca40b21ba84eee6a9658a33fc5f897d76baaf8e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deniskoronets/php-array-table/zipball/ca40b21ba84eee6a9658a33fc5f897d76baaf8e5",
+                "reference": "ca40b21ba84eee6a9658a33fc5f897d76baaf8e5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "dekor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Denis Koronets",
+                    "email": "deniskoronets@woo.zp.ua",
+                    "homepage": "https://woo.zp.ua/"
+                }
+            ],
+            "description": "PHP Library for printing associative arrays as text table (similar to mysql terminal console)",
+            "keywords": [
+                "library",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/deniskoronets/php-array-table/issues",
+                "source": "https://github.com/deniskoronets/php-array-table/tree/2.0"
+            },
+            "time": "2023-02-10T10:13:42+00:00"
+        },
+        {
             "name": "doctrine/instantiator",
             "version": "2.1.0",
             "source": {
@@ -10434,6 +10554,64 @@
                 "source": "https://github.com/drupal/core-dev/tree/10.6.16"
             },
             "time": "2026-05-20T15:35:08+00:00"
+        },
+        {
+            "name": "drupal/upgrade_status",
+            "version": "4.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/upgrade_status.git",
+                "reference": "4.3.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/upgrade_status-4.3.10.zip",
+                "reference": "4.3.10",
+                "shasum": "977dbf24874b2394b74fd6c7f9787bcc508a4e37"
+            },
+            "require": {
+                "dekor/php-array-table": "^2.0",
+                "drupal/core": "^9 || ^10 || ^11",
+                "mglaman/phpstan-drupal": "^1.2.11|^2.0",
+                "nikic/php-parser": "^4.0.0|^5.0.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0.0|^2.0",
+                "symfony/process": "^3.4|^4.0|^5.0|^6.0|^7.0",
+                "webflo/drupal-finder": "^1.2"
+            },
+            "require-dev": {
+                "drush/drush": "^11|^12|^13"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.3.10",
+                    "datestamp": "1780927635",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gábor hojtsy",
+                    "homepage": "https://www.drupal.org/user/4166"
+                }
+            ],
+            "description": "Review Drupal major upgrade readiness of the environment and components of the site.",
+            "homepage": "http://drupal.org/project/upgrade_status",
+            "support": {
+                "source": "https://git.drupalcode.org/project/upgrade_status"
+            }
         },
         {
             "name": "google/protobuf",

@@ -2,7 +2,7 @@ name: Union Register
 type: theme
 description: 'The initial custom theme using the Cornell ILR Union Component Library'
 package: Union
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 libraries:
   - union_register/global
   - union_organizer/ilr-base

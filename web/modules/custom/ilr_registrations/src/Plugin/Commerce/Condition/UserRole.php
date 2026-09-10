@@ -5,6 +5,7 @@ namespace Drupal\ilr_registrations\Plugin\Commerce\Condition;
 use Drupal\commerce\Plugin\Commerce\Condition\ConditionBase;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\user\Entity\Role;
 
 /**
  * Provides the user role condition for orders.
@@ -33,12 +34,13 @@ class UserRole extends ConditionBase {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
+    $user_role_names = array_map(fn($role) => $role->label(), Role::loadMultiple());
 
     $form['roles'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('Allowed roles'),
       '#default_value' => $this->configuration['roles'],
-      '#options' => array_map('\Drupal\Component\Utility\Html::escape', user_role_names()),
+      '#options' => array_map('\Drupal\Component\Utility\Html::escape', $user_role_names),
       '#required' => TRUE,
     ];
 

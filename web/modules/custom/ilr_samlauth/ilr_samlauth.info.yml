@@ -1,7 +1,7 @@
 name: 'ILR SamlAuth'
 type: module
 description: 'Standard glue code for ILR SamlAuth implementation'
-core_version_requirement: ^9.5 || ^10
+core_version_requirement: ^9.5 || ^10 || ^11
 package: 'ILR'
 dependencies:
   - samlauth
