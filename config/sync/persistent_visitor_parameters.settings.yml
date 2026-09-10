@@ -10,7 +10,7 @@ mode: first_touch
 persistor: persistor_cookie
 persistor_key: pvp_stored_variables
 persistor_expire: 0
+persistor_domain: .ilr.test
 respect_dnt: true
 server_parameters_on_get_parameters_only: false
 allow_unsafe_deserialization: false
-persistor_domain: .ilr.test
