@@ -258,6 +258,7 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
             "dietary_restrictions" => $participant->hasField('field_dietary_restrictions') ? $participant->field_dietary_restrictions->value : NULL,
             "accessible_accommodation" => $participant->hasField('field_accessible_accommodation') ? substr($participant->field_accessible_accommodation->value ?? '', 0, 250) : NULL,
             "is_cornell_employee" => $participant->hasField('field_is_cornell_employee') ? ($participant->field_is_cornell_employee->value ? 'true' : 'false') : NULL,
+            "email_opt_in" => $participant->hasField('field_email_opt_in') ? ($participant->field_email_opt_in->value ? 'true' : 'false') : NULL,
             "apply_to_certificate" => "",
             // LAI-only fields.
             "attendee_role_description" => NULL,
