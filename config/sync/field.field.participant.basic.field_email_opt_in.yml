@@ -1,0 +1,21 @@
+uuid: 6af498d0-e050-4a06-ad8d-641bbdf0848a
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.basic
+    - field.storage.participant.field_email_opt_in
+id: participant.basic.field_email_opt_in
+field_name: field_email_opt_in
+entity_type: participant
+bundle: basic
+label: 'Opt-in for updates on similar programs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
