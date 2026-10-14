@@ -2099,16 +2099,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "10.6.18",
+            "version": "10.6.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "4eb6dcf591944b9078635a78e132767f18908963"
+                "reference": "3a76c3e731884238bccf2e4eb6adc81022a32f28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/4eb6dcf591944b9078635a78e132767f18908963",
-                "reference": "4eb6dcf591944b9078635a78e132767f18908963",
+                "url": "https://api.github.com/repos/drupal/core/zipball/3a76c3e731884238bccf2e4eb6adc81022a32f28",
+                "reference": "3a76c3e731884238bccf2e4eb6adc81022a32f28",
                 "shasum": ""
             },
             "require": {
@@ -2269,9 +2269,9 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/10.6.18"
+                "source": "https://github.com/drupal/core/tree/10.6.19"
             },
-            "time": "2026-09-26T20:37:56+00:00"
+            "time": "2026-10-14T10:58:22+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -2325,16 +2325,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "10.6.18",
+            "version": "10.6.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "f81526840d467840b9924db989c27a0d07ee501c"
+                "reference": "1bb7ad2a4361f397fd0f7932cf408dfbf0ee7617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/f81526840d467840b9924db989c27a0d07ee501c",
-                "reference": "f81526840d467840b9924db989c27a0d07ee501c",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/1bb7ad2a4361f397fd0f7932cf408dfbf0ee7617",
+                "reference": "1bb7ad2a4361f397fd0f7932cf408dfbf0ee7617",
                 "shasum": ""
             },
             "require": {
@@ -2342,7 +2342,7 @@
                 "composer/semver": "~3.4.4",
                 "doctrine/deprecations": "~1.1.5",
                 "doctrine/lexer": "~2.1.1",
-                "drupal/core": "10.6.18",
+                "drupal/core": "10.6.19",
                 "egulias/email-validator": "~4.0.4",
                 "masterminds/html5": "~2.10.0",
                 "mck89/peast": "~v1.17.4",
@@ -2391,9 +2391,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/10.6.18"
+                "source": "https://github.com/drupal/core-recommended/tree/10.6.19"
             },
-            "time": "2026-09-26T20:37:56+00:00"
+            "time": "2026-10-14T10:58:22+00:00"
         },
         {
             "name": "drupal/date_popup",
