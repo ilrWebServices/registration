@@ -124,16 +124,16 @@
         },
         {
             "name": "commerceguys/addressing",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/addressing.git",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868"
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/504ed1765d7a6788830c197390879d677f54d868",
-                "reference": "504ed1765d7a6788830c197390879d677f54d868",
+                "url": "https://api.github.com/repos/commerceguys/addressing/zipball/e3ce66714cfa181b848533d926e8583261253c9e",
+                "reference": "e3ce66714cfa181b848533d926e8583261253c9e",
                 "shasum": ""
             },
             "require": {
@@ -182,22 +182,22 @@
             ],
             "support": {
                 "issues": "https://github.com/commerceguys/addressing/issues",
-                "source": "https://github.com/commerceguys/addressing/tree/v2.3.1"
+                "source": "https://github.com/commerceguys/addressing/tree/v2.3.2"
             },
-            "time": "2026-08-23T14:17:54+00:00"
+            "time": "2026-10-09T10:50:35+00:00"
         },
         {
             "name": "commerceguys/intl",
-            "version": "v2.0.8",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/commerceguys/intl.git",
-                "reference": "f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5"
+                "reference": "53c23d309739d2f460da4832517473fe3eee8036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/commerceguys/intl/zipball/f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5",
-                "reference": "f5c5ecb1ec2ed7e258c22f7db73e25c1a589f9c5",
+                "url": "https://api.github.com/repos/commerceguys/intl/zipball/53c23d309739d2f460da4832517473fe3eee8036",
+                "reference": "53c23d309739d2f460da4832517473fe3eee8036",
                 "shasum": ""
             },
             "require": {
@@ -233,9 +233,9 @@
             "description": "Internationalization library powered by CLDR data.",
             "support": {
                 "issues": "https://github.com/commerceguys/intl/issues",
-                "source": "https://github.com/commerceguys/intl/tree/v2.0.8"
+                "source": "https://github.com/commerceguys/intl/tree/v2.1.0"
             },
-            "time": "2026-08-21T08:01:00+00:00"
+            "time": "2026-09-23T09:38:12+00:00"
         },
         {
             "name": "composer/installers",
@@ -1512,20 +1512,20 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "3.3.9"
+                "reference": "3.3.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.9.zip",
-                "reference": "3.3.9",
-                "shasum": "223e929fc851ce83e38be9d818c3c3ec503f96c4"
+                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.13.zip",
+                "reference": "3.3.13",
+                "shasum": "94e00c20f6a8133a30a613b54cc5239eaea77a5e"
             },
             "require": {
-                "commerceguys/intl": "^2.0.6",
+                "commerceguys/intl": "^2.1.0",
                 "drupal/address": "^2.0",
                 "drupal/core": "^10.3 || ^11",
                 "drupal/entity": "^1.0",
@@ -1558,8 +1558,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1582,6 +1582,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Drupal Commerce is a flexible eCommerce solution.",
@@ -1592,7 +1600,7 @@
         },
         {
             "name": "drupal/commerce_cart",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_order": "*",
@@ -1601,8 +1609,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1625,6 +1633,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Implements the shopping cart system and add to cart features.",
@@ -1635,7 +1651,7 @@
         },
         {
             "name": "drupal/commerce_checkout",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_cart": "*",
@@ -1645,8 +1661,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1669,6 +1685,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Provides configurable checkout flows.",
@@ -1745,7 +1769,7 @@
         },
         {
             "name": "drupal/commerce_number_pattern",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_store": "*",
@@ -1754,8 +1778,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1778,6 +1802,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Provides configurable patterns for generating sequential numbers.",
@@ -1788,7 +1820,7 @@
         },
         {
             "name": "drupal/commerce_order",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_number_pattern": "*",
@@ -1802,8 +1834,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1826,6 +1858,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Defines the Order entity and associated features.",
@@ -1836,7 +1876,7 @@
         },
         {
             "name": "drupal/commerce_price",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/core": "^10.3 || ^11"
@@ -1844,8 +1884,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1868,6 +1908,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Defines the Currency entity.",
@@ -1878,7 +1926,7 @@
         },
         {
             "name": "drupal/commerce_store",
-            "version": "3.3.9",
+            "version": "3.3.13",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_price": "*",
@@ -1887,8 +1935,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.9",
-                    "datestamp": "1788781838",
+                    "version": "3.3.13",
+                    "datestamp": "1793205808",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1911,6 +1959,14 @@
                 {
                     "name": "rszrama",
                     "homepage": "https://www.drupal.org/user/49344"
+                },
+                {
+                    "name": "tomtech",
+                    "homepage": "https://www.drupal.org/user/254986"
+                },
+                {
+                    "name": "zaporylie",
+                    "homepage": "https://www.drupal.org/user/1532844"
                 }
             ],
             "description": "Defines the Store entity and associated features.",
@@ -3133,22 +3189,22 @@
         },
         {
             "name": "drupal/profile",
-            "version": "1.14.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/profile.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "eda73cb55a9034b318fb87bc9f8db4b778c4fdd6"
+                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "a2d993414cf3644a21e9ff8d6904306114cd42c5"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/core": "^10.3 || ^11",
                 "drupal/entity": "^1.0",
-                "php": "^7.4 || ^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
                 "drupal/search_api": "~1.30",
@@ -3157,8 +3213,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1765287779",
+                    "version": "8.x-1.16",
+                    "datestamp": "1792489590",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
