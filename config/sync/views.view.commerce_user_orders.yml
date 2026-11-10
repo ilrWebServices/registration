@@ -615,6 +615,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:
@@ -638,8 +639,7 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags:
-        - 'config:field.storage.commerce_order.order_items'
+      tags: {  }
   order_page:
     id: order_page
     display_title: 'User orders'
@@ -667,5 +667,4 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags:
-        - 'config:field.storage.commerce_order.order_items'
+      tags: {  }
