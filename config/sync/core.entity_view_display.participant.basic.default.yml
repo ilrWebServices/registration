@@ -7,6 +7,7 @@ dependencies:
     - field.field.participant.basic.field_accessible_accommodation
     - field.field.participant.basic.field_address
     - field.field.participant.basic.field_dietary_restrictions
+    - field.field.participant.basic.field_email_opt_in
     - field.field.participant.basic.field_industry
     - field.field.participant.basic.field_is_cornell_employee
     - field.field.participant.basic.field_job_title
@@ -47,6 +48,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_email_opt_in:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_industry:
     type: list_default

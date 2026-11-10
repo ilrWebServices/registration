@@ -8,6 +8,7 @@ dependencies:
     - field.field.participant.basic.field_accessible_accommodation
     - field.field.participant.basic.field_address
     - field.field.participant.basic.field_dietary_restrictions
+    - field.field.participant.basic.field_email_opt_in
     - field.field.participant.basic.field_industry
     - field.field.participant.basic.field_is_cornell_employee
     - field.field.participant.basic.field_job_title
@@ -22,7 +23,7 @@ mode: inline
 content:
   field_accessible_accommodation:
     type: string_textarea
-    weight: 6
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -35,6 +36,13 @@ content:
     settings:
       wrapper_type: details
     third_party_settings: {  }
+  field_email_opt_in:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_industry:
     type: options_select
     weight: 4
@@ -43,7 +51,7 @@ content:
     third_party_settings: {  }
   field_is_cornell_employee:
     type: boolean_checkbox
-    weight: 7
+    weight: 6
     region: content
     settings:
       display_label: true
