@@ -10,6 +10,7 @@ dependencies:
     - field.field.participant.lai_conference_attendee.field_attendee_type
     - field.field.participant.lai_conference_attendee.field_attendee_type_other
     - field.field.participant.lai_conference_attendee.field_dietary_restrictions
+    - field.field.participant.lai_conference_attendee.field_email_opt_in
     - field.field.participant.lai_conference_attendee.field_industry
     - field.field.participant.lai_conference_attendee.field_job_title
     - field.field.participant.lai_conference_attendee.field_phone
@@ -96,6 +97,7 @@ hidden:
   field_attendee_type: true
   field_attendee_type_other: true
   field_dietary_restrictions: true
+  field_email_opt_in: true
   field_industry: true
   field_job_title: true
   field_phone: true

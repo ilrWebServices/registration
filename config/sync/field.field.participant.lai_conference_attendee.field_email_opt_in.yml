@@ -1,0 +1,21 @@
+uuid: 2b811379-4548-4397-841d-37a7ae3d7a82
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_email_opt_in
+id: participant.lai_conference_attendee.field_email_opt_in
+field_name: field_email_opt_in
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'Opt-in for updates on similar programs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
