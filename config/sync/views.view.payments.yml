@@ -1134,12 +1134,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registrar: '0'
-              groat_alpern_admin: '0'
-              marketing_associate: '0'
-              debate_admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -1185,12 +1179,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registrar: '0'
-              groat_alpern_admin: '0'
-              marketing_associate: '0'
-              debate_admin: '0'
             reduce: false
             hide_single_bundle: true
           is_grouped: false
@@ -1237,12 +1225,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registrar: '0'
-              groat_alpern_admin: '0'
-              marketing_associate: '0'
-              debate_admin: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
@@ -1291,6 +1273,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:
@@ -2173,12 +2156,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registrar: '0'
-              groat_alpern_admin: '0'
-              marketing_associate: '0'
-              debate_admin: '0'
             reduce: false
             hide_single_bundle: true
           is_grouped: false
@@ -2225,12 +2202,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              registrar: '0'
-              groat_alpern_admin: '0'
-              marketing_associate: '0'
-              debate_admin: '0'
             min_placeholder: ''
             max_placeholder: ''
             placeholder: ''
