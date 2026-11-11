@@ -3155,17 +3155,17 @@
         },
         {
             "name": "drupal/persistent_visitor_parameters",
-            "version": "2.0.0-beta1",
+            "version": "2.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/persistent_visitor_parameters.git",
-                "reference": "2.0.0-beta1"
+                "reference": "2.0.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/persistent_visitor_parameters-2.0.0-beta1.zip",
-                "reference": "2.0.0-beta1",
-                "shasum": "38feadf221c1070d4fab0db93f206a231c6e1e56"
+                "url": "https://ftp.drupal.org/files/projects/persistent_visitor_parameters-2.0.0-beta2.zip",
+                "reference": "2.0.0-beta2",
+                "shasum": "6242b5b8b9346aba240aea9624590eb50d1ac80b"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11 || ^12"
@@ -3173,8 +3173,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-beta1",
-                    "datestamp": "1787842880",
+                    "version": "2.0.0-beta2",
+                    "datestamp": "1793970558",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -3207,7 +3207,8 @@
             "homepage": "https://www.drupal.org/project/persistent_visitor_parameters",
             "support": {
                 "source": "https://git.drupalcode.org/project/persistent_visitor_parameters"
-            }
+            },
+            "published-time": "2026-11-06T13:08:57+00:00"
         },
         {
             "name": "drupal/profile",
