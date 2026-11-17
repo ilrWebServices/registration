@@ -1,0 +1,18 @@
+uuid: 6d725e00-6e05-4edd-92d0-0a18383ea52d
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+id: participant.field_cle_credit_request
+field_name: field_cle_credit_request
+entity_type: participant
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

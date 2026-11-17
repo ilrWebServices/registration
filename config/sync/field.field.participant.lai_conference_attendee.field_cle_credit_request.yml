@@ -1,0 +1,21 @@
+uuid: ad23ce2b-f2cb-4a7f-858c-00b98432d75d
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_cle_credit_request
+id: participant.lai_conference_attendee.field_cle_credit_request
+field_name: field_cle_credit_request
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'This conference will be used for CLE credits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

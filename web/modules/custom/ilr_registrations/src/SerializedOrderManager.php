@@ -263,6 +263,7 @@ class SerializedOrderManager implements SerializedOrderManagerInterface {
             // LAI-only fields.
             "attendee_role_description" => NULL,
             "how_did_you_hear_about_us" =>  NULL,
+            "cle_credit_requested_for_state" => $participant->hasField('field_cle_credit_state') ? $participant->field_cle_credit_state->value : NULL,
             // @todo Add additional participant fields as necessary.
             // 'additional_fields' => $utm_fields,
             'additional_fields' => [],

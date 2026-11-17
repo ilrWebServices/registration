@@ -8,6 +8,8 @@ dependencies:
     - field.field.participant.lai_conference_attendee.field_address
     - field.field.participant.lai_conference_attendee.field_attendee_type
     - field.field.participant.lai_conference_attendee.field_attendee_type_other
+    - field.field.participant.lai_conference_attendee.field_cle_credit_request
+    - field.field.participant.lai_conference_attendee.field_cle_credit_state
     - field.field.participant.lai_conference_attendee.field_dietary_restrictions
     - field.field.participant.lai_conference_attendee.field_email_opt_in
     - field.field.participant.lai_conference_attendee.field_industry
@@ -49,6 +51,19 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_cle_credit_request:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_cle_credit_state:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_dietary_restrictions:
     type: string_textarea

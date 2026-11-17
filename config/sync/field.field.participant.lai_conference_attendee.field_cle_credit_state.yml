@@ -1,0 +1,21 @@
+uuid: 6ce5eaee-37cf-49c6-ade8-fcd90c71b864
+langcode: en
+status: true
+dependencies:
+  config:
+    - erf.participant_type.lai_conference_attendee
+    - field.storage.participant.field_cle_credit_state
+  module:
+    - options
+id: participant.lai_conference_attendee.field_cle_credit_state
+field_name: field_cle_credit_state
+entity_type: participant
+bundle: lai_conference_attendee
+label: 'For which state?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

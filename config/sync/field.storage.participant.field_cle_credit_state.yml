@@ -1,0 +1,21 @@
+uuid: b632166e-ea4c-4347-af60-ae347b51f8bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - erf
+    - options
+id: participant.field_cle_credit_state
+field_name: field_cle_credit_state
+entity_type: participant
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ilr_registrations_allowed_values_states
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

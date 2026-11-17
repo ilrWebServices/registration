@@ -33,6 +33,7 @@ use Drupal\erf\Form\RegistrationForm;
 use Drupal\user\UserInterface;
 use Drupal\commerce_product\Entity\ProductInterface;
 use Drupal\commerce_product\ProductVariationStorage;
+use Drupal\Core\Field\FieldStorageDefinitionListenerInterface;
 
 /**
  * Implements hook_entity_type_alter().
@@ -858,6 +859,7 @@ function ilr_registrations_field_class_year_options(FieldStorageDefinitionInterf
  * Callback function for participant.field_states allowed values.
  */
 function ilr_registrations_allowed_values_states(): array {
+  /** @var \CommerceGuys\Addressing\Subdivision\SubdivisionRepositoryInterface $subdivision_repository */
   $subdivision_repository = \Drupal::service('address.subdivision_repository');
 
   // Return the list of states for the US.
@@ -879,6 +881,15 @@ function ilr_registrations_inline_entity_form_entity_form_alter(&$entity_form, &
       ],
       'required' => [
         ':input[name="' . $parents_input_name . '[field_attendee_type]"]' => ['value' => 'other'],
+      ]
+    ];
+
+    $entity_form['field_cle_credit_state']['#states'] = [
+      'visible' => [
+        ':input[name="' . $parents_input_name . '[field_cle_credit_request][value]"]' => ['checked' => TRUE],
+      ],
+      'required' => [
+        ':input[name="' . $parents_input_name . '[field_cle_credit_request][value]"]' => ['checked' => TRUE],
       ]
     ];
   }
