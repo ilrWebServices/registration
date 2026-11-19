@@ -5,8 +5,8 @@ namespace Drupal\ilr_outreach_discounts\EventSubscriber;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\commerce_cart\Event\CartEvents;
 use Drupal\ilr_outreach_discount_api\IlrOutreachDiscountManager;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Drupal\commerce_cart\Event\CartOrderItemAddEvent;
+use Drupal\persistent_visitor_parameters\PersistenceManager;
 
 /**
  * An event subscriber for order items.
@@ -14,31 +14,17 @@ use Drupal\commerce_cart\Event\CartOrderItemAddEvent;
 class OrderItemSubscriber implements EventSubscriberInterface {
 
   /**
-   * The ILR Outreach discount manager.
-   *
-   * @var \Drupal\ilr_outreach_discount_api\IlrOutreachDiscountManager
-   */
-  protected $discountManager;
-
-  /**
-   * The request stack.
-   *
-   * @var \Symfony\Component\HttpFoundation\RequestStack
-   */
-  protected $requestStack;
-
-  /**
    * Constructs a new OrderItemSubscriber object.
    *
-   * @param \Drupal\ilr_outreach_discount_api\IlrOutreachDiscountManager $discount_manager
+   * @param \Drupal\ilr_outreach_discount_api\IlrOutreachDiscountManager $discountManager
    *   The ILR Outreach discount manager.
-   * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
-   *   The request stack.
+   * @param \Drupal\persistent_visitor_parameters\PersistenceManager $pvpManager
+   *   The persistent visitor paramater persistence manager.
    */
-  public function __construct(IlrOutreachDiscountManager $discount_manager, RequestStack $request_stack) {
-    $this->discountManager = $discount_manager;
-    $this->requestStack = $request_stack;
-  }
+  public function __construct(
+    protected IlrOutreachDiscountManager $discountManager,
+    protected PersistenceManager $pvpManager
+  ) {}
 
   /**
    * {@inheritdoc}
@@ -66,19 +52,14 @@ class OrderItemSubscriber implements EventSubscriberInterface {
       return;
     }
 
-    $pvp_stored_variables = $this->requestStack->getCurrentRequest()->cookies->get('pvp_stored_variables');
     $discount_codes = [];
 
-    if ($pvp_stored_variables) {
-      $pvp_variables = unserialize($pvp_stored_variables);
+    if ($pvp_stored_variables = $this->pvpManager->loadPersistedParameters()) {
+      foreach ($pvp_stored_variables as $key => $val) {
+        $val = preg_replace("/[^a-z0-9'\/\-_]/i", '', $val);
 
-      if (is_array($pvp_variables)) {
-        foreach ($pvp_variables as $key => $val) {
-          $val = preg_replace("/[^a-z0-9'\/\-_]/i", '', $val);
-
-          if ($key === 'ilr_discount_code') {
-            $discount_codes[] = $val;
-          }
+        if ($key === 'ilr_discount_code') {
+          $discount_codes[] = $val;
         }
       }
     }

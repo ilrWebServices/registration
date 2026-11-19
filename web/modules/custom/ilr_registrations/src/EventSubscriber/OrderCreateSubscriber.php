@@ -5,8 +5,8 @@ namespace Drupal\ilr_registrations\EventSubscriber;
 use Drupal\commerce_order\Event\OrderEvent;
 use Drupal\commerce_order\Event\OrderEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpFoundation\RequestStack;
 use Drupal\ilr_analytics_session\IlrAnalyticsSessionManager;
+use Drupal\persistent_visitor_parameters\PersistenceManager;
 
 /**
  * Event subscriber for order creation.
@@ -19,7 +19,7 @@ class OrderCreateSubscriber implements EventSubscriberInterface {
    * Constructs a new OrderCreateSubscriber object.
    */
   public function __construct(
-    protected RequestStack $requestStack,
+    protected PersistenceManager $pvpManager,
     protected IlrAnalyticsSessionManager $anlyticsSessionManager
   ) {}
 
@@ -45,20 +45,15 @@ class OrderCreateSubscriber implements EventSubscriberInterface {
     // the www.ilr.cornell.edu site. The cookie is configured for the
     // .ilr.cornell.edu domain, so it will also be available here. See
     // SerializedOrderManager::getObjectForOrder().
-    $pvp_stored_variables = $this->requestStack->getCurrentRequest()->cookies->get('pvp_stored_variables');
     $utm_codes = [];
     $order = $event->getOrder();
 
-    if ($pvp_stored_variables) {
-      $pvp_variables = unserialize($pvp_stored_variables);
+    if ($pvp_stored_variables = $this->pvpManager->loadPersistedParameters()) {
+      foreach ($pvp_stored_variables as $key => $val) {
+        $val = preg_replace("/[^a-z0-9'\/\-_]/i", '', $val);
 
-      if (is_array($pvp_variables)) {
-        foreach ($pvp_variables as $key => $val) {
-          $val = preg_replace("/[^a-z0-9'\/]/i", '', $val);
-
-          if (strpos($key, 'utm_') === 0) {
-            $utm_codes[$key] = $val;
-          }
+        if (strpos($key, 'utm_') === 0) {
+          $utm_codes[$key] = $val;
         }
       }
     }

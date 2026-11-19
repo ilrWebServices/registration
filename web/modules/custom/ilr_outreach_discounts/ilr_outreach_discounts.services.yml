@@ -10,6 +10,6 @@ services:
       - { name: commerce_order.order_processor, priority: 300 }
   ilr_outreach_discount_commerce_order_item_event_subscriber:
     class: Drupal\ilr_outreach_discounts\EventSubscriber\OrderItemSubscriber
-    arguments: ['@ilr_outreach_discount_manager', '@request_stack']
+    arguments: ['@ilr_outreach_discount_manager', '@persistent_visitor_parameters.persistence_manager']
     tags:
       - { name: event_subscriber }

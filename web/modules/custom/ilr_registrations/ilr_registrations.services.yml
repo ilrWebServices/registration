@@ -11,7 +11,7 @@ services:
       - { name: event_subscriber }
   ilr_registrations_order_create_subscriber:
     class: Drupal\ilr_registrations\EventSubscriber\OrderCreateSubscriber
-    arguments: ['@request_stack', '@ilr_analytics_session_manager']
+    arguments: ['@persistent_visitor_parameters.persistence_manager', '@ilr_analytics_session_manager']
     tags:
       - { name: event_subscriber }
   ilr_registrations_salesforce_event_subscriber:
