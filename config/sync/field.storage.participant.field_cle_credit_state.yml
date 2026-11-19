@@ -11,7 +11,7 @@ entity_type: participant
 type: list_string
 settings:
   allowed_values: {  }
-  allowed_values_function: Drupal\ilr_registrations\UtilityFunctions::getAllowedUsStates
+  allowed_values_function: 'Drupal\ilr_registrations\UtilityFunctions::getAllowedUsStates'
 module: options
 locked: false
 cardinality: 1
